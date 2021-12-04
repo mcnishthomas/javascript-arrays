@@ -7,10 +7,10 @@ const playlist = [
   'The Way You Look Tonight'
 ];
 
-function createListItems( arr ) {
+function createListItems(arr) {
   let items = '';
-  for ( let i = 0; i < arr.length; i++ ) {
-    items += `<li>${ arr[i] }</li>`;
+  for (let i = 0; i < arr.length; i++) {
+    items += `<li>${arr[i]}</li>`;
   }
   return items;
 }
