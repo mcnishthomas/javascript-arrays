@@ -3,11 +3,10 @@ const quiz = [
   ['What kind of dog is Chewy', 'Cavapoo'],
   ['How old is Chewy', '3'],
   ['Will the Lions win this week?', 'No']]
-
 ]
 
 // 2. Store the number of questions answered correctly
-
+let correctAnswers = '';
 
 /*
   3. Use a loop to cycle through each question
@@ -16,6 +15,9 @@ const quiz = [
       - If the response matches the answer, the number of correctly
         answered questions increments by 1
 */
+for (let i = 0; quiz.length, i++) {
+
+}
 
 
 // 4. Display the number of correct answers to the user
