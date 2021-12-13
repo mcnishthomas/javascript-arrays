@@ -1,12 +1,12 @@
 // 1. Create a multidimensional array to hold quiz questions and answers
-const quiz = [
-  ['What kind of dog is Chewy', 'Cavapoo'],
-  ['How old is Chewy', '3'],
-  ['Will the Lions win this week?', 'No']]
+let quiz = [
+  ['What kind of dog is Chewy', 'cavapoo'],
+  ['What city do you live in?', 'tampa'],
+  ['Will the Lions win this week?', 'no']
 ]
 
 // 2. Store the number of questions answered correctly
-let correctAnswers = '';
+let correctAnswers = 0;
 
 /*
   3. Use a loop to cycle through each question
@@ -15,9 +15,17 @@ let correctAnswers = '';
       - If the response matches the answer, the number of correctly
         answered questions increments by 1
 */
-for (let i = 0; quiz.length, i++) {
+for (let i = 0; i < quiz.length; i++) {
+  let question = quiz[i][0];
+  let answer = quiz[i][1];
+  let response = prompt(question);
 
+  if (answer === response.toLocaleLowerCase) {
+    correctAnswers++;
+  }
 }
 
-
 // 4. Display the number of correct answers to the user
+let html = `<h1>You got ${correctAnswers} answers correct!`;
+
+document.querySelector('man').innerHTML = html;
