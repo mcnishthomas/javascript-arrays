@@ -20,7 +20,7 @@ for (let i = 0; i < quiz.length; i++) {
   let answer = quiz[i][1];
   let response = prompt(question);
 
-  if (answer === response.toLocaleLowerCase) {
+  if (answer === response) {
     correctAnswers++;
   }
 }
@@ -28,4 +28,4 @@ for (let i = 0; i < quiz.length; i++) {
 // 4. Display the number of correct answers to the user
 let html = `<h1>You got ${correctAnswers} answers correct!`;
 
-document.querySelector('man').innerHTML = html;
+document.querySelector('main').innerHTML = html;
