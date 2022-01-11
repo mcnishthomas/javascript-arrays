@@ -7,6 +7,8 @@ let quiz = [
 
 // 2. Store the number of questions answered correctly
 let correctAnswers = 0;
+let correct = [];
+let incorrect = [];
 
 /*
   3. Use a loop to cycle through each question
@@ -22,10 +24,28 @@ for (let i = 0; i < quiz.length; i++) {
 
   if (answer === response) {
     correctAnswers++;
+    correct.push(question);
+  } else {
+    incorrect.push(question);
   }
 }
 
+const createListItems = arr => {
+  let items = '';
+  for (let i = 0; i < arr.length; i++) {
+    items += `<li>${arr[i]}</li>`;
+  }
+  return items;
+}
+
 // 4. Display the number of correct answers to the user
-let html = `<h1>You got ${correctAnswers} answers correct!`;
+let html = `<h1>You got ${correctAnswers} answers correct!</h1>
+            <h2>You got these questions right:</h2>
+            <ol>${createListItems(correct)}</ol>
+
+            <h2>You got these questions wrong:</h2>
+            <ol>${createListItems(incorrect)}</ol>
+`;
 
 document.querySelector('main').innerHTML = html;
+document.getElementById('#rightAnswers').innerHTML = rightAnswers;
